@@ -1,0 +1,8 @@
+services:
+  yoga-web:
+    build: .
+    image: city-yoga-private-lesson:latest
+    container_name: city-yoga-web
+    ports:
+      - "8080:80"
+    restart: unless-stopped

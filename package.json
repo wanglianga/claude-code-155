@@ -1,0 +1,27 @@
+{
+  "name": "city-yoga-private-lesson",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 4173",
+    "typecheck": "vue-tsc --noEmit",
+    "test:logic": "vite build --ssr scripts/smoke.ts --outDir dist-smoke --emptyOutDir && node dist-smoke/smoke.js",
+    "test:dom": "vite build --config vite.smoke.config.ts && node dist-smoke/dom-smoke.js",
+    "test": "npm run test:logic && npm run test:dom"
+  },
+  "dependencies": {
+    "pinia": "^2.3.1",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "happy-dom": "^20.14.5",
+    "typescript": "~5.7.3",
+    "vite": "^6.0.11",
+    "vue-tsc": "^2.2.0"
+  }
+}
